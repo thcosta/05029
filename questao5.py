@@ -18,7 +18,7 @@ def le_palavras():
 
 def maior_menor_palavra(palavras):
   maior, menor = palavras[0], palavras[0]
-  for palavra in palavras[1::-1]:
+  for palavra in palavras[1:]:
     if len(palavra) > len(maior):
       maior = palavra
     if len(palavra) < len(menor):
