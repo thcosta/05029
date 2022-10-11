@@ -13,6 +13,7 @@ def calcularMedia(nome):
   for linha in arquivo:
     soma += float(linha.strip('\n'))
     tamanho += 1
+  arquivo.close()
   media = soma/tamanho
   print(f'Média dos números contidos no arquivo: {media}')
   return media
