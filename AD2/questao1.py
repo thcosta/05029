@@ -30,7 +30,14 @@ def removerMenores(nome, valor):
       print(numero)
   arquivo.close()
   novo_arquivo.close()
-  os.rename(f'{nome}.temp', nome)
+  arquivo = open(nome, 'w')
+  novo_arquivo = open(f'{nome}.temp', 'r')
+  for linha in novo_arquivo:
+    arquivo.write(linha)
+  arquivo.close()
+  novo_arquivo.close()
+  os.remove(f'{nome}.temp')
+  return None
 
 def main():
   try: 
